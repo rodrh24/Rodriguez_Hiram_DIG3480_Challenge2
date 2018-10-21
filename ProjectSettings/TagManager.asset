@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ground
+  - Coin
+  - Enemy
+  - Wall
+  - CoinBox
+  - Mushroom
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Ground
+  - Player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Sky
+    uniqueID: 3212433601
+    locked: 0
+  - name: Ground
+    uniqueID: 3301015535
+    locked: 0
+  - name: Wall
+    uniqueID: 413926787
+    locked: 0
+  - name: Pickup
+    uniqueID: 4114535017
+    locked: 0
+  - name: Box
+    uniqueID: 1993004215
+    locked: 0
+  - name: Enemy
+    uniqueID: 650427945
+    locked: 0
+  - name: Player
+    uniqueID: 3475526869
+    locked: 0
