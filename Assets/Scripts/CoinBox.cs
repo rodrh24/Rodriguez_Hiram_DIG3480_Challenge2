@@ -6,14 +6,19 @@ public class CoinBox : MonoBehaviour
 {
 
     public int numberOfCoins;
+    public AudioClip coinSound;
 
     private Animator anim;
+    private AudioSource source;
+    private float volLowRange = .5f;
+    private float volHighRange = 1.0f;
 
     // Use this for initialization
     void Start()
     {
         numberOfCoins = 3;
         anim = GetComponent<Animator>();
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -32,6 +37,15 @@ public class CoinBox : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        numberOfCoins = numberOfCoins - 1;
+        if (numberOfCoins >= 1)
+        {
+            numberOfCoins = numberOfCoins - 1;
+            float vol = Random.Range(volLowRange, volHighRange);
+            source.PlayOneShot(coinSound, vol);
+        }
+        else
+        {
+            numberOfCoins = numberOfCoins - 1;
+        }
     }
 }
