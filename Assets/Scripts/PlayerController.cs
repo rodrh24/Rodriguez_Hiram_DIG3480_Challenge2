@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour {
 
         rb2d.velocity = new Vector2(moveHorizontal * speed, rb2d.velocity.y);
 
-        isOnGround = Physics2D.OverlapCircle(groundcheck.position, checkRadius, allGround);
+        //isOnGround = Physics2D.OverlapCircle(groundcheck.position, checkRadius, allGround);
 
         //Debug.Log(isOnGround);
 
