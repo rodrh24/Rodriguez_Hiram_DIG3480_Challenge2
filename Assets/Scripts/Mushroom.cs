@@ -4,34 +4,28 @@ using UnityEngine;
 
 public class Mushroom : MonoBehaviour {
 
-    public int numberOfHits;
+    public int MushSpeed;
+    public int Movement;
 
-    private Animator anim;
-
-    // Use this for initialization
     void Start()
     {
-        numberOfHits = 1;
-        anim = GetComponent<Animator>();
+        gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        if (numberOfHits >= 1)
-        {
-            anim.SetBool("hitBox", false);
-        }
+        //RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector2(Movement, 0));
+        //gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(Movement, 0) * MushSpeed;
 
-        if (numberOfHits < 1)
-        {
-            anim.SetBool("hitBox", true);
-        }
     }
+
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        numberOfHits = numberOfHits - 1;
+        if (other.gameObject.CompareTag("Wall"))
+        {
+            MushSpeed = MushSpeed * -1;
+        }
 
     }
 }

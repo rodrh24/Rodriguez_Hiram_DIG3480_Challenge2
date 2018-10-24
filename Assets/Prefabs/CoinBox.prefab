@@ -221,6 +221,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numberOfCoins: 0
   coinSound: {fileID: 8300000, guid: eacc732a5952c594588344d1a1ad53a5, type: 3}
+  countText: {fileID: 0}
+  count: 0
 --- !u!212 &212737944662816402
 SpriteRenderer:
   m_ObjectHideFlags: 1

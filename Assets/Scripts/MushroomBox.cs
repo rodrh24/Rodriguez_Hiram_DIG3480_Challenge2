@@ -33,5 +33,6 @@ public class MushroomBox : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         numberOfHits = numberOfHits - 1;
+        gameObject.transform.GetChild(0).gameObject.SetActive(true);
     }
 }
